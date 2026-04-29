@@ -1,0 +1,253 @@
+
+══════════════════════════════════════════════════════════════════════
+  DATA QUALITY REPORT — Amazon India Cleaning Pipeline
+══════════════════════════════════════════════════════════════════════
+Rows BEFORE: 1,127,609
+Rows AFTER:  1,127,609
+Cols BEFORE: 35
+Cols AFTER:  44
+
+══════════════════════════════════════════════════════════════════════
+  1. Missing values — BEFORE
+══════════════════════════════════════════════════════════════════════
+                        missing  missing_pct
+transaction_id                0         0.00
+order_date                    0         0.00
+customer_id                   0         0.00
+product_id                    0         0.00
+product_name                  0         0.00
+category                      0         0.00
+subcategory                   0         0.00
+brand                         0         0.00
+original_price_inr            0         0.00
+discount_percent              0         0.00
+discounted_price_inr          0         0.00
+quantity                      0         0.00
+subtotal_inr                  0         0.00
+delivery_charges          90201         8.00
+final_amount_inr              0         0.00
+customer_city                 0         0.00
+customer_state                0         0.00
+customer_tier                 0         0.00
+customer_spending_tier        0         0.00
+customer_age_group       135315        12.00
+payment_method                0         0.00
+delivery_days                 0         0.00
+delivery_type                 0         0.00
+is_prime_member               0         0.00
+is_festival_sale              0         0.00
+festival_name            777736        68.97
+customer_rating          341696        30.30
+return_status                 0         0.00
+order_month                   0         0.00
+order_year                    0         0.00
+order_quarter                 0         0.00
+product_weight_kg             0         0.00
+is_prime_eligible             0         0.00
+product_rating                0         0.00
+_source_year                  0         0.00
+══════════════════════════════════════════════════════════════════════
+  2. Missing values — AFTER
+══════════════════════════════════════════════════════════════════════
+                        missing  missing_pct
+transaction_id                0         0.00
+order_date                65120         5.78
+customer_id                   0         0.00
+product_id                    0         0.00
+product_name                  0         0.00
+category                      0         0.00
+subcategory                   0         0.00
+brand                         0         0.00
+original_price_inr        33630         2.98
+discount_percent              0         0.00
+discounted_price_inr          0         0.00
+quantity                      0         0.00
+subtotal_inr                  0         0.00
+delivery_charges          90201         8.00
+final_amount_inr              0         0.00
+customer_city                 0         0.00
+customer_state                0         0.00
+customer_tier                 0         0.00
+customer_spending_tier        0         0.00
+customer_age_group       135315        12.00
+payment_method                0         0.00
+delivery_days              9153         0.81
+delivery_type                 0         0.00
+is_prime_member               0         0.00
+is_festival_sale              0         0.00
+festival_name            777736        68.97
+customer_rating          341696        30.30
+return_status                 0         0.00
+order_month                   0         0.00
+order_year                    0         0.00
+order_quarter                 0         0.00
+product_weight_kg             0         0.00
+is_prime_eligible             0         0.00
+product_rating                0         0.00
+_source_year                  0         0.00
+order_date_dt             65120         5.78
+is_bulk_order                 0         0.00
+bulk_qty                      0         0.00
+price_was_corrected           0         0.00
+base_price_2015               0         0.00
+weight_kg                     0         0.00
+rating                        0         0.00
+launch_year                   0         0.00
+model                         0         0.00
+══════════════════════════════════════════════════════════════════════
+  3. Dtype comparison
+══════════════════════════════════════════════════════════════════════
+                         before    after
+transaction_id           object   object
+order_date               object   object
+customer_id              object   object
+product_id               object   object
+product_name             object   object
+category                 object   object
+subcategory              object   object
+brand                    object   object
+original_price_inr       object  float64
+discount_percent        float64  float64
+discounted_price_inr    float64  float64
+quantity                  int64    int64
+subtotal_inr            float64  float64
+delivery_charges        float64  float64
+final_amount_inr        float64  float64
+customer_city            object   object
+customer_state           object   object
+customer_tier            object   object
+customer_spending_tier   object   object
+customer_age_group       object   object
+payment_method           object   object
+delivery_days            object  float64
+delivery_type            object   object
+is_prime_member          object  boolean
+is_festival_sale         object  boolean
+festival_name            object   object
+customer_rating          object  float64
+return_status            object   object
+order_month               int64    int64
+order_year                int64    int64
+order_quarter             int64    int64
+product_weight_kg       float64  float64
+is_prime_eligible        object  boolean
+product_rating          float64  float64
+_source_year             object   object
+══════════════════════════════════════════════════════════════════════
+  4. Value samples — AFTER cleaning
+══════════════════════════════════════════════════════════════════════
+
+--- order_date ---
+order_date
+NaN           65120
+2020-12-02      575
+2020-12-05      560
+2020-12-01      540
+2021-12-08      538
+2020-12-06      537
+2021-12-11      537
+2020-12-26      535
+2020-12-18      532
+2020-12-14      531
+2020-12-29      530
+2022-12-06      528
+2020-12-12      526
+2020-12-04      522
+2020-12-13      521
+
+--- original_price_inr ---
+original_price_inr
+NaN         33630
+45363.47      434
+52280.35      412
+54731.86      405
+46234.09      391
+46458.94      388
+46161.87      371
+56337.89      369
+45182.31      366
+86477.53      365
+59385.34      363
+44939.24      361
+52566.79      355
+55739.57      354
+64917.57      352
+
+--- customer_rating ---
+customer_rating
+NaN    341696
+4.5    258705
+5.0    201852
+4.0    198296
+3.5     80157
+3.0     46903
+
+--- customer_city ---
+customer_city
+Mumbai        141365
+Delhi         123187
+Bengaluru     101959
+Chennai        84473
+Pune           67703
+Kolkata        66867
+Ahmedabad      50861
+Hyderabad      44573
+Jaipur         40453
+Surat          40400
+Nagpur         37211
+Kanpur         34334
+Lucknow        34077
+Indore         33592
+Coimbatore     26695
+
+--- is_prime_member ---
+is_prime_member
+False    698485
+True     429124
+
+--- is_festival_sale ---
+is_festival_sale
+False    777736
+True     349873
+
+--- category ---
+category
+Electronics    1127609
+
+--- delivery_days ---
+delivery_days
+3.0     288488
+1.0     210462
+4.0     206438
+5.0     136608
+2.0     126280
+6.0     102668
+7.0      34116
+NaN       9153
+0.0       6687
+1.5       4534
+15.0      2175
+
+--- payment_method ---
+payment_method
+UPI                 384228
+Cash on Delivery    322831
+Credit Card         172261
+Debit Card          140202
+Net Banking          64971
+Wallet               22821
+Bnpl                 20295
+
+══════════════════════════════════════════════════════════════════════
+  5. Bulk-order flags from Q8
+══════════════════════════════════════════════════════════════════════
+is_bulk_order
+False    1116387
+True       11222
+
+══════════════════════════════════════════════════════════════════════
+  6. Decimal-error corrections from Q9
+══════════════════════════════════════════════════════════════════════
+price_was_corrected
+False    1125328
+True        2281
