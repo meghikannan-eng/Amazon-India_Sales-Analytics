@@ -262,7 +262,7 @@ SELECT * FROM vw_yearly_revenue;
 
 ## Next steps
 
-- **Part 4 — PowerBI dashboard**: 25-30 charts across executive, revenue, customer, product, operations, and advanced views — connecting to the views in `dashboard_views.sql`
+- **Part 4 —Streamlit**: 25-30 charts across executive, revenue, customer, product, operations, and advanced views
 
 ## Coding standards
 
